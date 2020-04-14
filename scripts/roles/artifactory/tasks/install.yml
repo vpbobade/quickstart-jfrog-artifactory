@@ -10,9 +10,9 @@
 
 - name: Install Artifactory from RPM
   yum:
-    name: "jfrog-artifactory-pro-{{ artifactory_version }}"
+    name: "jfrog-artifactory-pro-{{ ArtifactoryVersion }}"
     state: installed
-    releasever: "{{ artifactory_version }}"
+    releasever: "{{ ArtifactoryVersion }}"
     enablerepo: bintray--jfrog-artifactory-pro-rpms
     disablerepo: "epel,amzn-main,amzn-updates"
   notify: Enable Artifactory
